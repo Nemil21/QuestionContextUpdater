@@ -157,10 +157,6 @@ def main():
     if 'changes_made' not in st.session_state:
         st.session_state.changes_made = False
 
-    # Add metadata with hardcoded timestamp
-    st.sidebar.markdown("**Current Date and Time (UTC):** 2025-01-12 07:20:58")
-    st.sidebar.markdown("**Current User's Login:** Nemil21")
-
     # API Key input
     api_key = st.sidebar.text_input("Enter Google Gemini API Key", type="password")
     if api_key:
