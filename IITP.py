@@ -17,6 +17,7 @@ class QuestionProcessor:
 
 Original Question: {row['Question']}
 
+
 Original Options:
 1. {row['Option1']}
 2. {row['Option2']}
@@ -24,7 +25,7 @@ Original Options:
 4. {row['Option4']}
 
 Please provide:
-1. A corrected version of the question with {row['State']} and {row['Attribute']} context
+1. A corrected version of the question with {row['State']} and {row['Attribute']} context. Make sure to include some kind of a cultural or regional artifact in the question.
 2. Modified options that reflect this context but must have the right answer as Uttarakhand, garhwali, kumaoni, and jaunsari and only one of those as i dont want confusing options. if you use uttarakhand as the right answer for the question form it in a way like which region...? and use other states of india as options and when using other three form it like which culture...? use other cultures as options
 3. The correct answer with explanation
 4. Relevant citations or sources but DO NOT HALLUCINATE or make up information only use word to word citation and try to use wikipedia for citations.
@@ -242,12 +243,13 @@ def main():
                 st.write("*Attribute:*", current_row['Attribute'])
             
             st.write("*Original Question:*", current_row['Question'])
+
             st.write("*Original Options:*")
             for i in range(1, 5):
                 st.write(f"{i}. {current_row[f'Option{i}']}")
 
             st.write("*Original Full Answer:*", current_row['Full Answer'])
-
+            
         # Process button
         if st.button("Process Current Question", key="process_btn"):
             with st.spinner("Processing..."):
