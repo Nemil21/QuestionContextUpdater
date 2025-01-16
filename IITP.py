@@ -246,6 +246,8 @@ def main():
             for i in range(1, 5):
                 st.write(f"{i}. {current_row[f'Option{i}']}")
 
+            st.write("*Original Full Answer:*", current_row['Full Answer'])
+
         # Process button
         if st.button("Process Current Question", key="process_btn"):
             with st.spinner("Processing..."):
