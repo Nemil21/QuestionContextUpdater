@@ -328,7 +328,7 @@ def main():
                             edited_opt = st.text_area(
                                 f"Edit Option {i+1}",
                                 value=st.session_state.edit_data['options'][i],
-                                height=50,
+                                height=70,
                                 key=f"edit_opt_{i}"
                             )
                             edited_options.append(edited_opt)
@@ -337,7 +337,7 @@ def main():
                             edited_opt = st.text_area(
                                 f"Edit Option {i+1}",
                                 value=st.session_state.edit_data['options'][i],
-                                height=50,
+                                height=70,
                                 key=f"edit_opt_{i}"
                             )
                             edited_options.append(edited_opt)
