@@ -29,7 +29,7 @@ Please provide:
 2. Modified options that reflect this context but must have the right answer as Uttarakhand, garhwali, kumaoni, and jaunsari and only one of those as i dont want confusing options. if you use uttarakhand as the right answer for the question form it in a way like which region...? and use other states of india as options and when using other three form it like which culture...? use other cultures as options
 3. The correct answer with explanation
 4. Relevant citations or sources but DO NOT HALLUCINATE or make up information only use word to word citation and try to use wikipedia for citations.
-
+5. Make sure to include a real cultural artifact in the question that is unique to {row['State']}
 Use the following knowledge base for context about Uttarakhand related to the attribute:
     "Uttarakhand": 
         "Overview": "Uttarakhand formerly known as Uttaranchal is also called Dev Bhumi “Land of Gods” due to a large number of pilgrimage temples situated there, Badrinath, Kedarnath, Gangotri, and Yamunotri form the Char Dham yatra. Uttarakhand is divided into two major regions of Garhwal and Kumaon. It was founded on November 9th, 2000 and borders Tibet, Nepal, Uttar Pradesh, Himachal Pradesh, and Haryana. The meaning of Uttarakhand is “Northern Land“, where Uttar means “North” and Khand means “Land“. It was earlier named Uttaranchal by the Government of Bhartiya Janta Party but the name Uttarakhand remains popular in the region so it was renamed Uttarakhand. Read more about Uttarakhand",
