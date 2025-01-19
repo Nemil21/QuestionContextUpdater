@@ -290,15 +290,12 @@ def main():
                     with col1:
                         if st.button("Edit This Suggestion", key="edit_btn"):
                             st.session_state.editing = True
-                            # Get the correct answer number and convert it to the actual option text
-                            answer_num = int(selected_suggestion['Corrected_Answer']) - 1
-                            answer_value = selected_suggestion['Corrected_Options'][answer_num].split('. ')[1] if len(selected_suggestion['Corrected_Options']) > answer_num else ''
                             
                             st.session_state.edit_data = {
                                 'question': selected_suggestion['Corrected_Question'],
                                 'options': [opt.split('. ')[1] if '. ' in opt else opt 
                                         for opt in selected_suggestion['Corrected_Options']],
-                                'answer': answer_value,  # Store the actual option text
+                                'answer': selected_suggestion['Corrected_Answer'],
                                 'explanation': selected_suggestion['Full Answer'],
                                 'citations': selected_suggestion['Answer Source']
                             }
@@ -307,17 +304,13 @@ def main():
                     with col2:
                         if st.button("Use Without Editing", key="use_without_edit_btn"):
                             updated_row = current_row.copy()
-                            # Get the correct answer number and convert it to the actual option text
-                            answer_num = int(selected_suggestion['Corrected_Answer']) - 1
-                            answer_value = selected_suggestion['Corrected_Options'][answer_num].split('. ')[1] if len(selected_suggestion['Corrected_Options']) > answer_num else ''
-                            
                             updated_row.update({
                                 'Question': selected_suggestion['Corrected_Question'],
                                 'Option1': selected_suggestion['Corrected_Options'][0].split('. ')[1] if selected_suggestion['Corrected_Options'] else '',
                                 'Option2': selected_suggestion['Corrected_Options'][1].split('. ')[1] if len(selected_suggestion['Corrected_Options']) > 1 else '',
                                 'Option3': selected_suggestion['Corrected_Options'][2].split('. ')[1] if len(selected_suggestion['Corrected_Options']) > 2 else '',
                                 'Option4': selected_suggestion['Corrected_Options'][3].split('. ')[1] if len(selected_suggestion['Corrected_Options']) > 3 else '',
-                                'Answer': answer_value,  # Store the actual option text instead of number
+                                'Answer': selected_suggestion['Corrected_Answer'],
                                 'Full Answer': selected_suggestion['Full Answer'],
                                 'Answer Source': selected_suggestion['Answer Source']
                             })
