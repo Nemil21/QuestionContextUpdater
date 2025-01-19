@@ -49,7 +49,7 @@ CORRECTED_OPTIONS:
 2. [Modified option 2]
 3. [Modified option 3]
 4. [Modified option 4]
-CORRECT_ANSWER: [Number of correct option]
+CORRECT_ANSWER: [correct option]
 EXPLANATION: [Detailed explanation]
 CITATIONS: [Relevant sources]"""
 
